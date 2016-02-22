@@ -13,7 +13,7 @@ GetNextLine Project:
 Printf Project:
 	ft_printf does not exactly work as the true printf, check the following points to know which things are implemented:
 
-	- supports s,S,p,d,D,i,o,O,u,U,x,X,c,C,n,% type;
+	- supports s, S, p, d, D, i, o, O, u, U, x, X, c, C, n, % type;
 
 	- works with the #0-+ flags;
 
@@ -34,7 +34,6 @@ NOTES:
 				ft_putstr(str);
 
 		- this function works even when multiplous fd are used within the same program.
-
 
 	2) FT_PRINTF
 		My ft_printf check for format errors (undefined behaviours, flags/lenght modifiers not compatible with each other or with the given type, etc) before starting to print, if any error is detected nothing will be printed and -1 will be returned.
