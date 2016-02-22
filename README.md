@@ -26,8 +26,8 @@ Printf Project:
 
 
 NOTES:
-1) GET_NEXT_LINE
-	- the function works even without a terminating newLine;
+1) GET_NEXT_LINE:
+	- the function works even without a terminating newLine into the file;
 
 	- calling the functions in the following loop enables to read and display all the file:
 		while (get_next_line(fd, &str) > 0)
@@ -35,5 +35,5 @@ NOTES:
 
 	- this function works even when multiplous fd are used within the same program.
 
-2) FT_PRINTF
+2) FT_PRINTF:
 	My ft_printf check for format errors (undefined behaviours, flags/lenght modifiers not compatible with each other or with the given type, etc) before starting to print, if any error is detected nothing will be printed and -1 will be returned.
