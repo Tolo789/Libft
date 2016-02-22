@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmutti <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/02 11:15:14 by cmutti            #+#    #+#             */
-/*   Updated: 2016/01/02 11:15:15 by cmutti           ###   ########.fr       */
+/*   Created: 2016/02/19 18:15:17 by cmutti            #+#    #+#             */
+/*   Updated: 2016/02/19 18:15:19 by cmutti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_itoa_base(int nbr, int base)
+int		ft_pow(int base, int power)
 {
-	int		nb;
-	char	*str;
-	char	*conv;
-	int		i;
+	int res;
 
-	i = (nbr > 0) ? 0 : 1;
-	nb = nbr;
-	conv = "0123456789abcdefg";
-	if (base == 10)
-		return (ft_itoa(nbr));
-	while (nb > 0)
+	res = 1;
+	if (power == 0)
+		return (1);
+	if (base == 0)
+		return (0);
+	while (power > 1)
 	{
-		nb /= base;
-		i++;
+		if (power % 2 != 0)
+		{
+			res *= base;
+			power--;
+		}
+		while (power > 1 && power % 2 == 0)
+		{
+			base = base * base;
+			power /= 2;
+		}
 	}
-	str = ft_strnew(i + 1);
-	if (!str)
-		return (NULL);
-	str[i--] = '\0';
-	while (i >= 0)
-	{
-		str[i--] = conv[nb % base];
-		nb /= base;
-	}
-	return (str);
+	res *= base;
+	return (res);
 }
