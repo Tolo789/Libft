@@ -1,16 +1,16 @@
 # Libft
 My own built C library.
 
-Until now it is the sum of the libft, get_next_line and ft_printf projects.
+Until now it is the sum of the LIBFT, GET_NEXT_LINE and FT_PRINTF 42's projects.
 
-Libft Project:
-	Recode some basic functions of the Standard C Library + some fundamental basic functions (e.g. putstr, putnbr) + some function to work with a list.
+LIBFT Project:
+	Recode some basic functions of the Standard C Library + some fundamental basic functions (e.g. putstr, putnbr) + some functions to work with lists.
 
-GetNextLine Project:
+GET_NEXT_LINE Project:
 	This function reads characters from the given file descriptor until the file ends or that one newLine is encountered, then saves the line in the string pointer given.
 	If there are some errors the function returns -1, if the file is ended returns 0, returns 1 otherwise.
 
-Printf Project:
+PRINTF Project:
 	ft_printf does not exactly work as the true printf, check the following points to know which things are implemented:
 
 	- supports s, S, p, d, D, i, o, O, u, U, x, X, c, C, n, % type;
