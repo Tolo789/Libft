@@ -27,7 +27,7 @@ Printf Project:
 
 NOTES:
 1) GET_NEXT_LINE
-	- the function works even without a terminating newLine.
+	- the function works even without a terminating newLine;
 
 	- calling the functions in the following loop enables to read and display all the file:
 		while (get_next_line(fd, &str) > 0)
