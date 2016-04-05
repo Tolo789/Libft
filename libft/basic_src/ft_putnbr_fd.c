@@ -10,14 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static int	ft_abs(int n)
-{
-	if (n < 0)
-		n = -n;
-	return (n);
-}
+#include "../libft.h"
 
 void		ft_putnbr_fd(int n, int fd)
 {

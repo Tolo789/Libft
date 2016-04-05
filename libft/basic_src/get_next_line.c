@@ -12,8 +12,8 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#define BUFF_SIZE 5
-#include "libft.h"
+#define BUFF_SIZE 80
+#include "../libft.h"
 
 static t_list	*ft_get_list_elem(t_list **begin, int fd)
 {

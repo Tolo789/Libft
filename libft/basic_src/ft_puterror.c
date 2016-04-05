@@ -11,16 +11,22 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libft.h"
+#include "../libft.h"
 
-int		ft_puterror(char *str)
+int		ft_puterror(int id)
 {
-	size_t	i;
-
-	if (str)
-	{
-		i = ft_strlen(str);
-		write(2, str, i);
-	}
-	return (0);
+	ft_putstr_fd("ERROR: ", 2);
+	if (id == 1)
+		ft_putstr_fd("Enter the path for a map file\n", 2);
+	else if (id == 2)
+		ft_putstr_fd("Problems creating the mlx pointer\n", 2);
+	else if (id == 3)
+		ft_putstr_fd("Problems creating the window\n", 2);
+	else if (id == -1)
+		ft_putstr_fd("The given path is not for a valid map\n", 2);
+	else if (id == -2)
+		ft_putstr_fd("Malloc error\n", 2);
+	else if (id == -3)
+		ft_putstr_fd("The image you are trying to create is too big\n", 2);
+	return (id);
 }

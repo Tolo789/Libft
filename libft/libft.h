@@ -81,11 +81,12 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int					ft_puterror(char *str);
+int					ft_puterror(int id);
 int					get_next_line(int const fd, char **line);
 int					ft_pow(int base, int power);
 void				ft_upstr(char **str);
 int					ft_printf(const char *format, ...);
+int					ft_abs(int nbr);
 
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);

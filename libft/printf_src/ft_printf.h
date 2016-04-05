@@ -13,7 +13,7 @@
 #ifndef _FT_PRINTF_H
 # define _FT_PRINTF_H
 
-# include "../basic_src/libft.h"
+# include "../libft.h"
 
 typedef struct	s_print
 {

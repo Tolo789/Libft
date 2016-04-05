@@ -74,6 +74,7 @@ SRC =	$(BSDIR)ft_putchar.c \
 		$(BSDIR)ft_itoa_base_mod.c \
 		$(BSDIR)ft_upstr.c \
 		$(BSDIR)ft_pow.c \
+		$(BSDIR)ft_abs.c \
 		$(PFDIR)ft_get_var.c \
 		$(PFDIR)ft_get_options.c \
 		$(PFDIR)ft_get_len_modif.c \
@@ -89,90 +90,7 @@ SRC =	$(BSDIR)ft_putchar.c \
 		$(PFDIR)ft_masks.c \
 		$(PFDIR)ft_strdup_mod.c
 
-OBJ =	ft_putchar.o \
-		ft_putstr.o \
-		ft_putendl.o \
-		ft_putnbr.o \
-		ft_putchar_fd.o \
-		ft_putstr_fd.o \
-		ft_putendl_fd.o \
-		ft_putnbr_fd.o \
-		ft_strlen.o \
-		ft_strcpy.o \
-		ft_strncpy.o \
-		ft_strcat.o \
-		ft_strncat.o \
-		ft_strchr.o \
-		ft_strrchr.o \
-		ft_strstr.o \
-		ft_strnstr.o \
-		ft_isalpha.o \
-		ft_isdigit.o \
-		ft_isalnum.o \
-		ft_isprint.o \
-		ft_toupper.o \
-		ft_tolower.o \
-		ft_memalloc.o \
-		ft_memdel.o \
-		ft_isascii.o \
-		ft_strnew.o \
-		ft_strdel.o \
-		ft_strclr.o \
-		ft_striter.o \
-		ft_striteri.o \
-		ft_strmap.o \
-		ft_strmapi.o \
-		ft_strequ.o \
-		ft_strnequ.o \
-		ft_strsub.o \
-		ft_strjoin.o \
-		ft_strtrim.o \
-		ft_strsplit.o \
-		ft_atoi.o \
-		ft_ctoa.o \
-		ft_itoa.o \
-		ft_itoa_mod.o \
-		ft_itoa_mod2.o \
-		ft_itoa_mod3.o \
-		ft_ftoa.o \
-		ft_lftoa.o \
-		ft_strdup.o \
-		ft_strcmp.o \
-		ft_strncmp.o \
-		ft_memset.o \
-		ft_bzero.o \
-		ft_memcpy.o \
-		ft_memccpy.o \
-		ft_memmove.o \
-		ft_memchr.o \
-		ft_strlcat.o \
-		ft_memcmp.o \
-		ft_lstnew.o \
-		ft_lstdelone.o \
-		ft_lstdel.o \
-		ft_lstadd.o \
-		ft_lstiter.o \
-		ft_lstmap.o \
-		ft_puterror.o \
-		get_next_line.o \
-		ft_itoa_base.o \
-		ft_itoa_base_mod.o \
-		ft_upstr.o \
-		ft_pow.o \
-		ft_get_var.o \
-		ft_get_options.o \
-		ft_get_len_modif.o \
-		ft_printf.o \
-		ft_check_var.o \
-		ft_check_value.o \
-		ft_saveret.o \
-		ft_get_value.o \
-		ft_create_str.o \
-		ft_apply_options.o \
-		ft_wchar.o \
-		ft_wstoa.o \
-		ft_masks.o \
-		ft_strdup_mod.o
+OBJ =	$(SRC:.c=.o)
 
 HEAD = libft.h
 
@@ -187,14 +105,12 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "				Libftprintf created and listed"
-$(OBJ):
-	@$(CC) $(CFLAGS) -c $(SRC)
 clean:
 	@/bin/rm -f $(OBJ)
-	@echo "				All .o deleted"
+	@echo "				All libft's .o deleted"
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "				Libft deleted"
+	@echo "				Libft.a deleted"
 re: fclean all
 
 .PHONY: all clean fclean re
