@@ -75,6 +75,7 @@ SRC =	$(BSDIR)ft_putchar.c \
 		$(BSDIR)ft_upstr.c \
 		$(BSDIR)ft_pow.c \
 		$(BSDIR)ft_abs.c \
+		$(BSDIR)ft_sqr.c \
 		$(PFDIR)ft_get_var.c \
 		$(PFDIR)ft_get_options.c \
 		$(PFDIR)ft_get_len_modif.c \
@@ -104,13 +105,13 @@ $(NAME): $(OBJ)
 	@echo "				Compiled with succes !!"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "				Libftprintf created and listed"
+	@echo "				libft.a created and listed"
 clean:
 	@/bin/rm -f $(OBJ)
 	@echo "				All libft's .o deleted"
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "				Libft.a deleted"
+	@echo "				libft.a deleted"
 re: fclean all
 
 .PHONY: all clean fclean re

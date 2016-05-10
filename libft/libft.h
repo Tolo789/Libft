@@ -87,6 +87,7 @@ int					ft_pow(int base, int power);
 void				ft_upstr(char **str);
 int					ft_printf(const char *format, ...);
 int					ft_abs(int nbr);
+int					ft_sqr(int nbr);
 
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
