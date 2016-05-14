@@ -20,9 +20,6 @@ void	ft_strclr(char *s)
 		i = ft_strlen(s);
 	else
 		i = -1;
-	while (i >= 0)
-	{
+	while (--i >= 0)
 		s[i] = '\0';
-		i--;
-	}
 }

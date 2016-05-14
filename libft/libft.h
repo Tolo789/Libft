@@ -84,10 +84,12 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_puterror(int id);
 int					get_next_line(int const fd, char **line);
 int					ft_pow(int base, int power);
+unsigned int		ft_uipow(unsigned int base, int power);
 void				ft_upstr(char **str);
 int					ft_printf(const char *format, ...);
 int					ft_abs(int nbr);
 int					ft_sqr(int nbr);
+unsigned int		ft_uisqr(unsigned int nbr);
 
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
